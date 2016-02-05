@@ -1,0 +1,23 @@
+- name: Cirrus Valuation
+  url: /work/cirrus/
+  image: /images/work/cirrus/cirrus-thumbnail.jpg
+
+- name: Disaster Housing Services
+  url: /work/disaster/
+  image: /images/work/disaster/disaster-thumbnail.jpg
+
+- name: Flexible Packaging Association
+  url: /work/flexible/
+  image: /images/work/flexible/flexible-thumbnail.jpg
+
+- name: Signature Collision Centers
+  url: /work/signature/
+  image: /images/work/signature/signature-thumbnail.jpg
+
+- name: ABYC
+  url: /work/abyc/
+  image: /images/work/abyc/abyc-thumbnail.jpg
+
+- name: BD Electric
+  url: /work/bdelec/
+  image: /images/work/bdelectric/bdelec-thumbnail.jpg

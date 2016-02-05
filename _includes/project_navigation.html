@@ -1,0 +1,28 @@
+{% assign projects = site.data.projects | map: 'projects' | join: ',' | split: ',' %}
+
+{% for project in projects %}
+  {% assign document_url = project | prepend:"/work/" | append:"/" %}
+  {% if document_url == page.url %}
+  <div class="projects-nav">
+    <div class="previous-project">
+      {% if forloop.first %}
+      <span class="hidden">Previous Project</span>
+      {% else %}
+      {% assign previous = forloop.index0 | minus: 1 %}
+      {% assign previous_page = projects[previous] | prepend:"/work/" | append:"/" %}
+      <a href="{{ site.url }}{{ previous_page }}">Previous Project</a>
+      {% endif %}
+    </div>
+    <div class="next-project">
+      {% if forloop.last %}
+      <span class="hidden">Next Project</span>
+      {% else %}
+      {% assign next = forloop.index0 | plus: 1 %}
+      {% assign next_page = projects[next] | prepend:"/work/" | append:"/" %}
+      <a href="{{ site.url }}{{ next_page }}">Next Project</a>
+      {% endif %}
+    </div>
+  </div>
+  {% break %}
+  {% endif %}
+{% endfor %}

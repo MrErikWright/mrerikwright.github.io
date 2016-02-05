@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="post-inner">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <section class="post-meta">
+        <time datetime="{{ page.date | date: '%B %d, %Y' }}" class="post-date">{{ page.date | date: '%B %d, %Y' }}</time>
+      </section>
+    </header>
+
+    {{ content }}
+
+    <aside class="read-next">
+      {{ post.url | remove:'/' }}
+      {% if page.next %}
+        <a class="read-next-note" href="{{ page.next.url }}">
+          <section class="post-read-more">
+            <h4>Next post</h4>
+            <h2>{{ page.next.title }}</h2>
+          </section>
+        </a>
+      {% endif %}
+      {% if page.previous %}
+        <a class="read-prev-note" href="{{ page.previous.url }}">
+          <section class="post-read-more">
+            <h4>Previous post</h4>
+            <h2>{{ page.previous.title }}</h2>
+          </section>
+        </a>
+      {% endif %}
+    </aside>
+  </div>
+</article>

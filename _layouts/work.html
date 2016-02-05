@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p class="page-overview">{{ page.overview }}</p>
+  <aside class="project-role">
+    <div><strong>Role:</strong> {{ page.role }}</div>
+    <div><strong>Technology:</strong> {{ page.technology }}</div>
+  </aside>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% include project_navigation.html %}
+</div>

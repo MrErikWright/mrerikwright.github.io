@@ -1,0 +1,126 @@
+@mixin abs-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin border-radius($radius: 6px) {
+  @include vendor-prefix('border-radius', $radius);
+  background-clip: padding-box;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin media-query($point, $mq-small-width: 40em, $mq-medium-width: 64em) {
+  $mq-small: '(max-width: #{$mq-small-width})';
+  $mq-medium: '(min-width: #{$mq-small-width}) and (max-width: #{$mq-medium-width})';
+  $mq-large: '(min-width: #{$mq-medium-width})';
+
+  @if $point == small {
+    @media #{$mq-small} {
+      @content;
+    }
+  }
+  @else if $point == medium {
+    @media #{$mq-medium} {
+      @content;
+    }
+  }
+  @else if $point == large {
+    @media #{$mq-large} {
+      @content;
+    }
+  }
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin inline-block() {
+  display: -moz-inline-stock;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+@mixin line-height($heightValue: 16) {
+  line-height: ($heightValue * 2) + px;
+  line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin opacity($opacity: 0.5) {
+  $opacityMultiplied: ($opacity * 100);
+
+  filter: alpha(opacity=$opacityMultiplied);
+  -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+  @include vendor-prefix('opacity', $opacity);
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin rem($property, $values, $main-font-size: 16px) {
+  $px-values: ();
+  $rem-values: ();
+
+  @each $value in $values {
+    @if ($value == 0) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
+      $px-values: append($px-values, $value);
+      $rem-values: append($rem-values, $value);
+    } @else {
+      $unit: unit($value);
+      @if $unit == 'px' {
+        $px-values: append($px-values, #{strip-unit($value)}px);
+        $rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
+      } @else {
+        $px-values: append($px-values, ($value * $main-font-size));
+        $rem-values: append($rem-values, #{$value}rem);
+      }
+    }
+  }
+  #{$property}: #{$px-values};
+  #{$property}: #{$rem-values};
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
+@mixin vendor-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}

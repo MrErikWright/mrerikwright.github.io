@@ -1,0 +1,33 @@
+markdown: kramdown
+paginate: 5
+language: 'en'
+
+baseurl: ''
+url: ''
+permalink: /:title/
+paginate_path: '/notes/:num/'
+excerpt_separator: <!--more-->
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+author:
+  name: Erik Wright
+
+title: Erik Wright
+tagline: Visual Designer &amp; Front-end Developer
+email: hello@erikwright.co
+description: Portfolio website of visual designer and front-end developer, Erik Wright
+
+linkedin_username: wrightanimates
+github_username: theerikwright
+
+gems:
+  - jekyll-paginate
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md

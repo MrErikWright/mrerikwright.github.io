@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+current: work
+---
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">visual designer &amp; <br />front-end developer</h1>
+    <p>Erik Wright fuses design and code to create compelling user experiences. <br />He currently resides in Texas.</p>
+  </div>
+</section>
+
+<section class="work">
+  {% for project in site.data.work %}
+  <article class="work-card">
+    <a href="{{ site.url }}{{ project.url }}">
+      <img src="{{ site.url }}{{ project.image }}" class="work-card-picture" alt="{{ project.name }}" />
+    </a>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="call-to-action">
+  <div class="container">
+    <h1>Let's create something awesome. <br />Get in touch.</h1>
+    <p>&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#114;&#105;&#107;&#119;&#114;&#105;&#103;&#104;&#116;&#46;&#99;&#111;</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <ul>
+      <li><a href="https://github.com/{{ site.github_username }}" target="_blank">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">Linkedin</a></li>
+    </ul>
+  </div>
+</footer>
