@@ -3,7 +3,7 @@ paginate: 5
 language: 'en'
 
 baseurl: ''
-url: ''
+url: 'http://erikwright.co'
 permalink: /:title/
 paginate_path: '/notes/:num/'
 excerpt_separator: <!--more-->
@@ -20,8 +20,8 @@ tagline: Visual Designer &amp; Front-end Developer
 email: hello@erikwright.co
 description: Portfolio website of visual designer and front-end developer, Erik Wright
 
-linkedin_username: wrightanimates
-github_username: theerikwright
+linkedin_username: MrErikWright
+github_username: MrErikWright
 
 gems:
   - jekyll-paginate
@@ -31,3 +31,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - LICENSE.md
