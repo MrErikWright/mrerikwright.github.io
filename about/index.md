@@ -12,22 +12,14 @@ Erik spends his days creating for the web and his evenings [bringing characters 
 Erik currently resides in Texas and is available for work.
 
 ### Capabilities
-* UI/UX design
-* After Effects
-* Sketching &amp; wireframes
-* HTML
-* Responsive website &amp; digital design
-* CSS/Sass
-* Email design &amp; development
-* jQuery
-* Affinity Photo/Designer
-* Grunt
-* Photoshop
-* Jekyll
-* Illustrator
-* WordPress
-* InDesign
-* PHP
+*Software*: Sketch, Photoshop, Illustrator, InDesign, After Effects, Affinity Photo/Designer, Atom
+
+*Development*: HTML, CSS/Sass, jQuery, Grunt, Jekyll, WordPress, PHP
+
+*Skills*: UI/UX Design, sketching &amp; wireframes, responsive website &amp; digital design, email design &amp; development
+
+### Contact
+&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#114;&#105;&#107;&#119;&#114;&#105;&#103;&#104;&#116;&#46;&#99;&#111;
 
 ### Colophon
 This site is proudly powered by [Jekyll](http://jekyllrb.com/) and hosted on [Github Pages](https://pages.github.com/). Handcrafted with love and caffeine using HTML5 and [Sass](http://sass-lang.com).

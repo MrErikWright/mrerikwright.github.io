@@ -3,7 +3,7 @@ paginate: 5
 language: 'en'
 
 baseurl: ''
-url: 'http://erikwright.co'
+url: 'http://www.erikwright.co'
 permalink: /:title/
 paginate_path: '/notes/:num/'
 excerpt_separator: <!--more-->

@@ -8,7 +8,6 @@
 .project-content,
 .container,
 .work,
-.page-about > ul,
 .project-role,
 .read-next-note,
 .read-prev-note {
@@ -226,41 +225,6 @@ footer {
 
   @include media-query(small, 40em) {
     margin-bottom: $spacing-unit / 2;
-  }
-}
-
-.page-about {
-  > ul {
-    @include rem(font-size, 22px);
-    @include line-height(14);
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-
-    li {
-      float: left;
-      width: 50%;
-
-      @include media-query(small, 62.50em) {
-        &:nth-child(1n+1) {
-          width: 60%;
-        }
-
-        &:nth-child(2n+2) {
-          width: 40%;
-        }
-      }
-
-      @include media-query(small, 40em) {
-        float: none;
-        width: 100%;
-      }
-    }
-
-    @include media-query(small, 40em) {
-      @include rem(font-size, 16px);
-      @include line-height(10);
-    }
   }
 }
 

@@ -2,7 +2,7 @@
 layout: work
 title: American Boat &amp; Yacht Council
 overview: "A microsite for the American Boat &amp; Yacht Council, a premier global standards organization that develops voluntary safety standards for recreational boats. This responsive site was created alongside a brand refresh to create a more cohesive feel across their products. Upon completion, the microsite was integrated into Your Membership, a custom membership management software."
-role: Design, Development
+role: Web Design, Development
 technology: HTML, CSS, jQuery
 permalink: /work/abyc/
 current: work
