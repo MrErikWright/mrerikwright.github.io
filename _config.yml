@@ -22,6 +22,7 @@ description: Portfolio website of visual designer and front-end developer, Erik 
 
 linkedin_username: MrErikWright
 github_username: MrErikWright
+google_analytics: UA-74983475-1
 
 gems:
   - jekyll-paginate
