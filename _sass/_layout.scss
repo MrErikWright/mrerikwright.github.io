@@ -137,14 +137,12 @@
   width: 100%;
 
   .work-card {
+    margin-bottom: $spacing-unit / 6;
     padding: ($spacing-unit * 4) $spacing-unit;
     text-align: center;
 
-    #arrow-right {
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: 1;
+    &:last-child {
+      margin-bottom: 0;
     }
 
     h2 {
@@ -165,21 +163,23 @@
       margin: $spacing-unit 0 0 0;
     }
 
-    svg {
-      left: $spacing-unit / 8;
-      position: relative;
-      @include transition(left, 0.2s, linear);
-    }
-
     a {
       border: none;
+      color: $light-grey;
       font-weight: 300;
+
+      span {
+        left: $spacing-unit / 8;
+        position: relative;
+        @include transition(left, 0.2s, linear);
+      }
 
       &:hover {
         border: none;
+        color: $blue;
 
-        svg {
-          left: $spacing-unit / 2;
+        span {
+          left: $spacing-unit / 3;
           position: relative;
           @include transition(left, 0.2s, linear);
         }
@@ -187,119 +187,21 @@
     }
   }
 
-  .cirrus {
-    background: #75b751;
-
-    h2 {
-      color: #dbffb7;
-    }
-
-    #arrow-right {
-      stroke: #0f5100;
-    }
-
-    h3,
-    a {
-      color: #0f5100;
-    }
-  }
-
-  .disaster {
-    background: #ffd73c;
-
-    h2 {
-      color: #b38b00;
-    }
-
-    #arrow-right {
-      stroke: #805800;
-    }
-
-    h3,
-    a {
-      color: #805800;
-    }
-  }
-
-  .flexible {
-    background: #295197;
-
-    h2 {
-      color: #8fb7fd;
-    }
-
-    #arrow-right {
-      stroke: #5c84ca;
-    }
-
-    h3,
-    a {
-      color: #5c84ca;
-    }
-  }
-
-  .signature {
-    background: #414345;
-
-    h2 {
-      color: #a7a9ab;
-    }
-
-    #arrow-right {
-      stroke: #747678;
-    }
-
-    h3,
-    a {
-      color: #747678;
-    }
-  }
-
-  .abyc {
-    background: #83a3d3;
-
-    h2 {
-      color: #375787;
-    }
-
-    #arrow-right {
-      stroke: #042454;
-    }
-
-    h3,
-    a {
-      color: #042454;
-    }
-  }
-
-  .bdelec {
-    background: #8d9dab;
-
-    h2 {
-      color: #41515f;
-    }
-
-    #arrow-right {
-      stroke: #0e1e2c;
-    }
-
-    h3,
-    a {
-      color: #0e1e2c;
-    }
-  }
-
+  .cirrus,
+  .disaster,
+  .flexible,
+  .signature,
+  .abyc,
+  .bdelec,
   .unassigned {
     background: #f2f2f2;
 
-    h2,
-    h3,
-    a {
+    h2 {
       color: $dark-grey;
     }
 
-    #arrow-right {
-      stroke: $dark-grey;
+    h3 {
+      color: $medium-grey;
     }
   }
 }
