@@ -19,14 +19,14 @@ current: notes
   <nav class="pagination" role="pagination">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <a class="newer-posts" href="{{ site.url }}/notes/" title="Previous Page">Newer Posts</a>
+        <a class="newer-posts" href="{{ site.url }}/notes/" title="Previous Page"><span>&larr;</span> Newer Posts</a>
       {% else %}
-        <a class="newer-posts" href="{{ site.url }}/notes/{{ paginator.previous_page }}/" title="Previous Page">Newer Posts</a>
+        <a class="newer-posts" href="{{ site.url }}/notes/{{ paginator.previous_page }}/" title="Previous Page"><span>&larr;</span> Newer Posts</a>
       {% endif %}
     {% endif %}
     <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-      <a class="older-posts" href="{{ site.url }}/notes/{{paginator.next_page }}/" title="Next Page">Older Posts</a>
+      <a class="older-posts" href="{{ site.url }}/notes/{{paginator.next_page }}/" title="Next Page">Older Posts <span>&rarr;</span></a>
     {% endif %}
   </nav>
 </div>

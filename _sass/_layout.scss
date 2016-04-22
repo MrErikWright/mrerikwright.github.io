@@ -323,16 +323,40 @@ footer {
   .newer-posts {
     left: 0;
 
+    span {
+      position: relative;
+      right: $spacing-unit / 8;
+      @include transition(right, 0.2s, linear);
+    }
+
     &:hover {
       color: $blue;
+
+      span {
+        position: relative;
+        right: $spacing-unit / 2;
+        @include transition(right, 0.2s, linear);
+      }
     }
   }
 
   .older-posts {
     right: 0;
 
+    span {
+      left: $spacing-unit / 8;
+      position: relative;
+      @include transition(left, 0.2s, linear);
+    }
+
     &:hover {
       color: $blue;
+
+      span {
+        left: $spacing-unit / 2;
+        position: relative;
+        @include transition(left, 0.2s, linear);
+      }
     }
   }
 }
@@ -408,6 +432,42 @@ footer {
 
     a {
       border: none;
+    }
+  }
+
+  .previous-project {
+    a {
+      span {
+        position: relative;
+        right: $spacing-unit / 8;
+        @include transition(right, 0.2s, linear);
+      }
+
+      &:hover {
+        span {
+          position: relative;
+          right: $spacing-unit / 2;
+          @include transition(right, 0.2s, linear);
+        }
+      }
+    }
+  }
+
+  .next-project {
+    a {
+      span {
+        left: $spacing-unit / 8;
+        position: relative;
+        @include transition(left, 0.2s, linear);
+      }
+
+      &:hover {
+        span {
+          left: $spacing-unit / 2;
+          position: relative;
+          @include transition(left, 0.2s, linear);
+        }
+      }
     }
   }
 }
