@@ -41,6 +41,11 @@
   margin-right: auto;
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
+
+  @include media-query(small, 40em) {
+    padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
+  }
 }
 
 .header {
@@ -185,16 +190,16 @@
   .cirrus {
     background: #75b751;
 
-    h2,
-    a {
+    h2 {
       color: #dbffb7;
     }
 
     #arrow-right {
-      stroke: #dbffb7;
+      stroke: #0f5100;
     }
 
-    h3 {
+    h3,
+    a {
       color: #0f5100;
     }
   }
@@ -202,16 +207,16 @@
   .disaster {
     background: #ffd73c;
 
-    h2,
-    a {
+    h2 {
       color: #b38b00;
     }
 
     #arrow-right {
-      stroke: #b38b00;
+      stroke: #805800;
     }
 
-    h3 {
+    h3,
+    a {
       color: #805800;
     }
   }
@@ -219,16 +224,16 @@
   .flexible {
     background: #295197;
 
-    h2,
-    a {
+    h2 {
       color: #8fb7fd;
     }
 
     #arrow-right {
-      stroke: #8fb7fd;
+      stroke: #5c84ca;
     }
 
-    h3 {
+    h3,
+    a {
       color: #5c84ca;
     }
   }
@@ -236,16 +241,16 @@
   .signature {
     background: #414345;
 
-    h2,
-    a {
+    h2 {
       color: #a7a9ab;
     }
 
     #arrow-right {
-      stroke: #a7a9ab;
+      stroke: #747678;
     }
 
-    h3 {
+    h3,
+    a {
       color: #747678;
     }
   }
@@ -253,16 +258,16 @@
   .abyc {
     background: #83a3d3;
 
-    h2,
-    a {
+    h2 {
       color: #375787;
     }
 
     #arrow-right {
-      stroke: #375787;
+      stroke: #042454;
     }
 
-    h3 {
+    h3,
+    a {
       color: #042454;
     }
   }
@@ -270,22 +275,32 @@
   .bdelec {
     background: #8d9dab;
 
-    h2,
-    a {
+    h2 {
       color: #41515f;
     }
 
     #arrow-right {
-      stroke: #41515f;
+      stroke: #0e1e2c;
     }
 
-    h3 {
+    h3,
+    a {
       color: #0e1e2c;
     }
   }
 
   .unassigned {
     background: #f2f2f2;
+
+    h2,
+    h3,
+    a {
+      color: $dark-grey;
+    }
+
+    #arrow-right {
+      stroke: $dark-grey;
+    }
   }
 }
 
