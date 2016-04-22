@@ -1,23 +1,11 @@
-::-webkit-selection {
-  @include background-opacity(#2e2e2e, 0.8);
-  color: $white;
-  text-shadow: none;
-}
-
-::-moz-selection {
-  @include background-opacity(#2e2e2e, 0.8);
-  color: $white;
-  text-shadow: none;
-}
-
-::selection {
-  @include background-opacity(#2e2e2e, 0.8);
+@include selection {
+  @include background-opacity($blue, 0.8);
   color: $white;
   text-shadow: none;
 }
 
 hr {
-  background-color: $ultra-dark-grey;
+  background-color: $dark-grey;
   border: 0;
   height: 1px;
   margin-bottom: $spacing-unit;
@@ -26,13 +14,8 @@ hr {
 
 ul,
 ol {
-  @include rem(font-size, 22px);
-  @include line-height(14);
-
-  @include media-query(small, 40em) {
-    @include rem(font-size, 16px);
-    @include line-height(10);
-  }
+  @include rem(font-size, 16px);
+  @include line-height(12);
 }
 
 li {
@@ -63,12 +46,13 @@ figcaption {
 a {
   color: $dark-grey;
   border-bottom: 1px solid $dark-grey;
+  padding-bottom: 2px;
   text-decoration: none;
-  @include transition(all, 0.3s, ease);
+  @include transition(all, 0.2s, linear);
 
   &:hover {
-    border-bottom: 1px solid $dark-grey;
-    color: $ultra-dark-grey;
+    border-color: $blue;
+    color: $blue;
     text-decoration: none;
   }
 }

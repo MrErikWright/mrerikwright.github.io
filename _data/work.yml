@@ -1,23 +1,35 @@
-- name: Cirrus Valuation
+- name: "Cirrus Valuation"
+  nickname: "cirrus"
+  role: "UI/UX Design"
   url: /work/cirrus/
-  image: /images/work/cirrus/cirrus-thumbnail.jpg
+  image: /images/work/cirrus.png
 
-- name: Disaster Housing Services
+- name: "Disaster Housing Services"
+  nickname: "disaster"
+  role: "Logo Design, UI/UX Design, Development"
   url: /work/disaster/
-  image: /images/work/disaster/disaster-thumbnail.jpg
+  image: /images/work/disaster.png
 
-- name: Flexible Packaging Association
+- name: "Flexible Packaging Association"
+  nickname: "flexible"
+  role: "UI/UX Design, Development"
   url: /work/flexible/
-  image: /images/work/flexible/flexible-thumbnail.jpg
+  image: /images/work/flexible.png
 
-- name: Signature Collision Centers
+- name: "Signature Collision Centers"
+  nickname: "signature"
+  role: "UI/UX Design, Development"
   url: /work/signature/
-  image: /images/work/signature/signature-thumbnail.jpg
+  image: /images/work/signature.png
 
-- name: ABYC
+- name: "American Boat &amp; Yacht Council"
+  nickname: "abyc"
+  role: "UI/UX Design, Development"
   url: /work/abyc/
-  image: /images/work/abyc/abyc-thumbnail.jpg
+  image: /images/work/abyc.png
 
-- name: BD Electric
+- name: "Bausum &amp; Duckett Electric"
+  nickname: "bdelec"
+  role: "UI/UX Design, Development"
   url: /work/bdelec/
-  image: /images/work/bdelectric/bdelec-thumbnail.jpg
+  image: /images/work/bdelec.png

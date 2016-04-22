@@ -9,7 +9,7 @@ He holds a BS with distinction in Computer Graphics Technology and a minor in Co
 
 Erik spends his days creating for the web and his evenings [bringing characters to life](https://vimeo.com/90569070). He enjoys music, British football (Liverpool), cooking, writing, typography, traveling, and cars. He also has an unhealthy obsession with the Oxford comma and the em dash.
 
-Erik currently resides in Texas and is available for work.
+Erik currently resides in Austin, TX and is available for work.
 
 ### Capabilities
 *Software*: Sketch, Photoshop, Illustrator, InDesign, After Effects, Affinity Photo/Designer, Atom

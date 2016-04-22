@@ -12,24 +12,24 @@ layout: default
 
     {{ content }}
 
-    <aside class="read-next">
-      {{ post.url | remove:'/' }}
-      {% if page.next %}
-        <a class="read-next-note" href="{{ page.next.url }}">
-          <section class="post-read-more">
-            <h4>Next post</h4>
-            <h2>{{ page.next.title }}</h2>
-          </section>
-        </a>
-      {% endif %}
-      {% if page.previous %}
-        <a class="read-prev-note" href="{{ page.previous.url }}">
-          <section class="post-read-more">
-            <h4>Previous post</h4>
-            <h2>{{ page.previous.title }}</h2>
-          </section>
-        </a>
-      {% endif %}
-    </aside>
   </div>
+  <aside class="read-next">
+    {{ post.url | remove:'/' }}
+    {% if page.next %}
+      <a class="read-next-note" href="{{ page.next.url }}">
+        <section class="post-read-more">
+          <h4>Next post</h4>
+          <h2>{{ page.next.title }}</h2>
+        </section>
+      </a>
+    {% endif %}
+    {% if page.previous %}
+      <a class="read-prev-note" href="{{ page.previous.url }}">
+        <section class="post-read-more">
+          <h4>Previous post</h4>
+          <h2>{{ page.previous.title }}</h2>
+        </section>
+      </a>
+    {% endif %}
+  </aside>
 </article>

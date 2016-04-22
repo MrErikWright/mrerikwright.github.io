@@ -1,8 +1,7 @@
 body {
-  color: $medium-grey;
-  font-family: $body-font-family;
+  color: $dark-grey;
+  font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height;
 }
 
 h1,
@@ -12,8 +11,6 @@ h4,
 h5,
 h6 {
   clear: both;
-  color: $ultra-dark-grey;
-  font-family: $title-font-family;
   font-weight: 700;
   margin: 0 0 ($spacing-unit / 2) 0;
 }
@@ -79,21 +76,9 @@ h6 {
 }
 
 p {
-  @include rem(font-size, 22px);
-  @include line-height(14);
+  line-height: $base-line-height;
   margin-bottom: $spacing-unit;
   margin-top: 0;
-
-  @include media-query(small, 62.50em) {
-    @include rem(font-size, 20px);
-    @include line-height(12);
-  }
-
-  @include media-query(small, 40em) {
-    @include rem(font-size, 16px);
-    @include line-height(10);
-    margin-bottom: $spacing-unit / 2;
-  }
 }
 
 b,
@@ -109,10 +94,10 @@ i {
 }
 
 blockquote {
-  background: #ffffff;
-  border-left: 4px solid $ultra-dark-grey;
-  @include rem(font-size, 26px);
-  @include line-height(13);
+  background: $white;
+  border-left: 4px solid $blue;
+  @include rem(font-size, 20px);
+  @include line-height(10);
   padding-left: $spacing-unit / 2;
 
   > :last-child {
@@ -120,37 +105,30 @@ blockquote {
   }
 
   @include media-query(small, 40em) {
-    @include rem(font-size, 18px);
-    @include line-height(12);
+    @include rem(font-size, 16px);
+    @include line-height(8);
   }
 }
 
 cite {
   display: block;
-  @include rem(font-size, 22px);
-  @include line-height(11);
+  @include rem(font-size, 18px);
+  @include line-height(12);
   font-style: italic;
   font-weight: 700;
   margin: $spacing-unit / 2;
 
   @include media-query(small, 40em) {
     @include rem(font-size, 16px);
-    @include line-height(10);
+    @include line-height(8);
   }
 }
 
 pre,
 code {
-  background-color: lighten($ultra-dark-grey, 70%);
+  background-color: lighten($dark-grey, 70%);
   @include border-radius(3px);
   border: 1px solid $medium-grey;
-  @include rem(font-size, 18px);
-  @include line-height(12);
-
-  @include media-query(small, 40em) {
-    @include rem(font-size, 16px);
-    @include line-height(10);
-  }
 }
 
 code {
@@ -158,7 +136,7 @@ code {
 }
 
 pre {
-  padding: 8px 12px;
+  padding: ($spacing-unit / 3) ($spacing-unit / 2);
   overflow-x: scroll;
 
   > code {
@@ -169,40 +147,31 @@ pre {
 }
 
 .hero-title {
-  @include rem(font-size, 70px);
-  @include line-height(35);
+  @include rem(font-size, 60px);
+  @include line-height(32);
   margin: 0;
 
   @include media-query(small, 62.50em) {
-    @include rem(font-size, 60px);
-    @include line-height(30);
+    @include rem(font-size, 46px);
+    @include line-height(26);
   }
 
   @include media-query(small, 40em) {
     @include rem(font-size, 28px);
-    @include line-height(14);
+    @include line-height(16);
   }
 }
 
 .hero,
 .call-to-action {
   p {
-    @include rem(font-size, 24px);
-    @include line-height(14);
+    @include rem(font-size, 18px);
+    @include line-height(11);
     margin: ($spacing-unit / 2) 0 0 0;
-
-    @include media-query(small, 62.50em) {
-      margin: ($spacing-unit / 2) 0 0 0;
-
-      br {
-        display: none;
-      }
-    }
 
     @include media-query(small, 40em) {
       @include rem(font-size, 16px);
       @include line-height(10);
-      margin: ($spacing-unit / 2) 0 0 0;
 
       br {
         display: none;
@@ -213,25 +182,19 @@ pre {
 
 .call-to-action {
   h1 {
+    @include rem(font-size, 24px);
+    @include line-height(14);
     margin: 0;
-  }
-}
 
-@include media-query(small, 40em) {
-  .call-to-action {
-    h1 {
-      @include rem(font-size, 22px);
-      @include line-height(11);
-
-      br {
-        display: none;
-      }
+    @include media-query(small, 40em) {
+      @include rem(font-size, 18px);
+      @include line-height(9);
     }
   }
 }
 
 .page-title {
-  margin: ($spacing-unit * 2) 0 ($spacing-unit);
+  margin: ($spacing-unit * 2) 0 $spacing-unit;
 
   @include media-query(small, 62.50em) {
     margin: ($spacing-unit * 2) 0 ($spacing-unit / 2);
