@@ -137,6 +137,7 @@
   width: 100%;
 
   .work-card {
+    background: #f2f2f2;
     margin-bottom: $spacing-unit / 6;
     padding: ($spacing-unit * 4) $spacing-unit;
     text-align: center;
@@ -146,6 +147,7 @@
     }
 
     h2 {
+      color: $dark-grey;
       margin: ($spacing-unit * 2) 0 0 0;
 
       @include media-query(small, 40em) {
@@ -154,6 +156,7 @@
     }
 
     h3 {
+      color: $dark-grey;
       @include rem(font-size, 16px);
       font-weight: 300;
       margin: ($spacing-unit / 6) 0 0 0;
@@ -184,24 +187,6 @@
           @include transition(left, 0.2s, linear);
         }
       }
-    }
-  }
-
-  .cirrus,
-  .disaster,
-  .flexible,
-  .signature,
-  .abyc,
-  .bdelec,
-  .unassigned {
-    background: #f2f2f2;
-
-    h2 {
-      color: $dark-grey;
-    }
-
-    h3 {
-      color: $medium-grey;
     }
   }
 }

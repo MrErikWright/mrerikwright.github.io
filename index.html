@@ -12,7 +12,7 @@ current: work
 
 <section class="work">
   {% for project in site.data.work %}
-  <article class="work-card{% if project.nickname == 'cirrus' %} cirrus{% elsif project.nickname == 'disaster' %} disaster{% elsif project.nickname == 'flexible' %} flexible{% elsif project.nickname == 'signature' %} signature{% elsif project.nickname == 'abyc' %} abyc{% elsif project.nickname == 'bdelec' %} bdelec{% else %} unassigned{% endif %}">
+  <article class="work-card{% if project.nickname != '' %} {{ project.nickname }}{% else %} unassigned{% endif %}">
     <div class="container">
       <a href="{{ site.url }}{{ project.url }}">
         <img src="{{ site.url }}{{ project.image }}" class="work-card-picture" alt="{{ project.name }}" />
