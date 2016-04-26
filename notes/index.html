@@ -13,6 +13,9 @@ current: notes
     </h2>
     <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time>
     <p>{{ post.excerpt | strip_html }}</p>
+    <p>
+      <a href="{{ site.url }}{{ post.url }}">Read more <span>&rarr;</span></a>
+    </p>
   </article>
   {% endfor %}
 

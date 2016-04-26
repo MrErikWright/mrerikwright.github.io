@@ -46,7 +46,7 @@ figcaption {
 a {
   color: $dark-grey;
   border-bottom: 1px solid $dark-grey;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   text-decoration: none;
   @include transition(all, 0.2s, linear);
 

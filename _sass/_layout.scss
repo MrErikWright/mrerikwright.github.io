@@ -258,10 +258,33 @@ footer {
   }
 
   p {
-    margin-top: $spacing-unit / 2;
+    margin: ($spacing-unit / 2) 0;
 
     @include media-query(small, 40em) {
       margin-bottom: 0;
+    }
+
+    a {
+      border: none;
+      color: $light-grey;
+      @include rem(font-size, 14px);
+      font-weight: 300;
+
+      span {
+        left: $spacing-unit / 8;
+        position: relative;
+        @include transition(left, 0.2s, linear);
+      }
+
+      &:hover {
+        color: $blue;
+
+        span {
+          left: $spacing-unit / 3;
+          position: relative;
+          @include transition(left, 0.2s, linear);
+        }
+      }
     }
   }
 
@@ -319,7 +342,7 @@ footer {
 
       span {
         position: relative;
-        right: $spacing-unit / 2;
+        right: $spacing-unit / 3;
         @include transition(right, 0.2s, linear);
       }
     }
@@ -338,7 +361,7 @@ footer {
       color: $blue;
 
       span {
-        left: $spacing-unit / 2;
+        left: $spacing-unit / 3;
         position: relative;
         @include transition(left, 0.2s, linear);
       }
@@ -444,7 +467,7 @@ footer {
       &:hover {
         span {
           position: relative;
-          right: $spacing-unit / 2;
+          right: $spacing-unit / 3;
           @include transition(right, 0.2s, linear);
         }
       }
@@ -461,7 +484,7 @@ footer {
 
       &:hover {
         span {
-          left: $spacing-unit / 2;
+          left: $spacing-unit / 3;
           position: relative;
           @include transition(left, 0.2s, linear);
         }
