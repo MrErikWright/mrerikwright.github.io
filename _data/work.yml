@@ -4,6 +4,12 @@
   url: /work/cirrus/
   image: /images/work/cirrus.png
 
+- name: "Kay Apartments"
+  nickname: "kay"
+  role: "UI/UX Design"
+  url: /work/kay/
+  image: /images/work/kay.png
+
 - name: "Disaster Housing Services"
   nickname: "disaster"
   role: "Logo Design, UI/UX Design, Development"
