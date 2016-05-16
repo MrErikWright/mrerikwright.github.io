@@ -16,6 +16,8 @@ Erik currently resides in Austin, TX and is available for work.
 
 *Development*: HTML, CSS/Sass, jQuery, Grunt, Jekyll, WordPress, PHP
 
+*Project Management*: Teamwork, Workamajig
+
 *Skills*: UI/UX Design, sketching &amp; wireframes, responsive website &amp; digital design, email design &amp; development
 
 ### Contact
