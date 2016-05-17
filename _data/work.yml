@@ -1,14 +1,20 @@
-- name: "Cirrus Valuation"
-  nickname: "cirrus"
+- name: "Artella"
+  nickname: "artella"
   role: "UI/UX Design"
-  url: /work/cirrus/
-  image: /images/work/cirrus.png
+  url: /work/artella/
+  image: /images/work/artella.png
 
 - name: "Kay Apartments"
   nickname: "kay"
   role: "UI/UX Design"
   url: /work/kay/
   image: /images/work/kay.png
+
+- name: "Cirrus Valuation"
+  nickname: "cirrus"
+  role: "UI/UX Design"
+  url: /work/cirrus/
+  image: /images/work/cirrus.png
 
 - name: "Disaster Housing Services"
   nickname: "disaster"
