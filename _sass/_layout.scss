@@ -71,7 +71,7 @@
     stroke-linejoin: round;
     stroke-miterlimit: 1.41421;
     vertical-align: middle;
-    width: 30px;
+    width: 28px;
 
     #logo {
       fill-rule: nonzero;
@@ -93,7 +93,7 @@
     > li {
       display: block;
       float: left;
-      @include line-height(12);
+      @include line-height(11);
       padding-right: $spacing-unit;
 
       &:last-child {
