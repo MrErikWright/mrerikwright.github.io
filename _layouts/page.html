@@ -1,7 +1,25 @@
 ---
 layout: default
 ---
-<div class="container">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
-</div>
+<section class="l-page">
+	<header class="c-header">
+		<h1>{{ page.title }}</h1>
+		{% if page.current contains 'Project' %}
+		<div class="c-header__text">
+			<p>{{ page.overview }}</p>
+			<p class="u-spacing--half"><strong>Role:</strong> {{ page.role }}</p>
+			<p><strong>Technology:</strong> {{ page.technology }}</p>
+		</div>
+		{% endif %}
+	</header>
+
+	<div class="c-container c-container--narrow">
+		{{ content }}
+	</div>
+
+	{% if page.has_post_pagination == true %}
+		{% include notes_navigation.html %}
+	{% elsif page.has_project_pagination == true %}
+		{% include project_navigation.html %}
+	{% endif %}
+</section>

@@ -1,35 +1,15 @@
 ---
-layout: default
+layout: page
 title: Notes
-current: notes
+has_post_pagination: true
 ---
-<div class="container">
-  <h1 class="page-title">{{ page.title }}</h1>
-
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h2 class="post-title">
-      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time>
-    <p>{{ post.excerpt | strip_html }}</p>
-    <p>
-      <a href="{{ site.url }}{{ post.url }}">Read more <span>&rarr;</span></a>
-    </p>
-  </article>
-  {% endfor %}
-
-  <nav class="pagination" role="pagination">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="newer-posts" href="{{ site.url }}/notes/" title="Previous Page"><span>&larr;</span> Newer Posts</a>
-      {% else %}
-        <a class="newer-posts" href="{{ site.url }}/notes/{{ paginator.previous_page }}/" title="Previous Page"><span>&larr;</span> Newer Posts</a>
-      {% endif %}
-    {% endif %}
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a class="older-posts" href="{{ site.url }}/notes/{{paginator.next_page }}/" title="Next Page">Older Posts <span>&rarr;</span></a>
-    {% endif %}
-  </nav>
-</div>
+<ul class="post">
+{% for post in paginator.posts %}
+	<li class="post__item">
+		<h2 class="post__item--title">{{ post.title }}</h2>
+		<time class="post__item--date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time>
+		<p class="post__item--excerpt">{{ post.excerpt | strip_html }}</p>
+		<p><a href="{{ post.url | prepend: site.url }}">Continue reading &rsaquo;</a></p>
+	</li>
+{% endfor %}
+</ul>

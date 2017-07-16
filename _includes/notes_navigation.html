@@ -1,0 +1,13 @@
+<nav class="c-container c-container--narrow c-pagination" role="pagination">
+{% if paginator.previous_page %}
+{% if paginator.previous_page == 1 %}
+	<a href="{{ site.url | append: '/notes/' }}" class="c-pagination__item--previous" title="Previous Page">&lsaquo; Newer</a>
+{% else %}
+	<a href="{{ site.url | append: '/notes/' | append: paginator.previous_page }}" class="c-pagination__item--previous" title="Previous Page">&lsaquo; Newer</a>
+{% endif %}
+{% endif %}
+	<span class="c-pagination__number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+{% if paginator.next_page %}
+	<a href="{{ site.url | append: '/notes/' | append: paginator.next_page }}" class="c-pagination__item--next" title="Next Page">Older &rsaquo;</a>
+{% endif %}
+</nav>

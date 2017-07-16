@@ -1,10 +1,24 @@
-- title: Projects
-  projects:
-    - animation-mentor
-    - artella
-    - kay
-    - cirrus
-    - disaster
-    - flexible
-    - signature
-    - bdelec
+- name: "Animation Mentor"
+  nickname: "animation-mentor"
+  role: "UI/UX Design"
+  url: /projects/animation-mentor/
+
+- name: "Artella"
+  nickname: "artella"
+  role: "UI/UX Design"
+  url: /projects/artella/
+
+- name: "Kay Apartments"
+  nickname: "kay"
+  role: "UI/UX Design"
+  url: /projects/kay/
+
+- name: "Cirrus Valuation"
+  nickname: "cirrus"
+  role: "UI/UX Design"
+  url: /projects/cirrus/
+
+- name: "Disaster Housing Services"
+  nickname: "disaster"
+  role: "Logo Design, UI/UX Design, Development"
+  url: /projects/disaster/

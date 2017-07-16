@@ -1,9 +1,18 @@
 ---
 layout: default
-title: "404 &mdash; Page Not Found"
-permalink: 404.html
+title: "Dang. I hate when this happens."
+permalink: /404.html
 ---
-<div class="container">
-  <h1 class="page-title">{{ page.title }}</h1>
-  <p>Sorry, that page doesn't exist. You can try to look for it by going <a href="{{ site.url }}/">back to the homepage</a>.</p>
-</div>
+<section class="l-page">
+	<header class="c-header">
+		<h1>{{ page.title }}</h1>
+	</header>
+
+	<div class="c-container c-container--narrow">
+		<p class="u-text-center">
+			<img src="{{ site.url}}/images/general/confused.gif">
+		</p>
+		<p>Uh oh. It seems you've stumbled onto something magical &mdash; the elusive 404 page. But you can't tell anyone. Promise?</p>
+		<p>Feel free to hit the back button, <a href="{{ site.url }}">go back home</a> and try again, or, you know, stick around here. It's your call.</p>
+	</div>
+</section>

@@ -1,35 +1,31 @@
 ---
 layout: default
 ---
-<article class="post-inner">
-  <div class="container">
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <section class="post-meta">
-        <time datetime="{{ page.date | date: '%B %d, %Y' }}" class="post-date">{{ page.date | date: '%B %d, %Y' }}</time>
-      </section>
-    </header>
+<section class="l-page">
+	<header class="c-header">
+		<h1>{{ page.title }}</h1>
+		<div class="c-header__text">
+			<time datetime="{{ page.date | date: '%B %d, %Y' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+		</div>
+	</header>
 
-    {{ content }}
+	<div class="c-container c-container--narrow">
+		{{ content }}
+	</div>
 
-  </div>
-  <aside class="read-next">
-    {{ post.url | remove:'/' }}
-    {% if page.next %}
-      <a class="read-next-note" href="{{ page.next.url }}">
-        <section class="post-read-more">
-          <h4>Next post</h4>
-          <h2>{{ page.next.title }}</h2>
-        </section>
-      </a>
-    {% endif %}
-    {% if page.previous %}
-      <a class="read-prev-note" href="{{ page.previous.url }}">
-        <section class="post-read-more">
-          <h4>Previous post</h4>
-          <h2>{{ page.previous.title }}</h2>
-        </section>
-      </a>
-    {% endif %}
-  </aside>
-</article>
+	<nav class="c-container c-container--narrow c-pagination__posts u-flex u-flex-align-items-center u-flex-justify-space-between u-flex-wrap" role="pagination">
+	{{ post.url | remove: '/' }}
+	{% if page.previous %}
+		<a class="c-pagination__link--previous" href="{{ page.previous.url }}">
+			<h6>&lsaquo; Previous</h6>
+			<h6><strong>{{ page.previous.title }}</strong></h6>
+		</a>
+	{% endif %}
+	{% if page.next %}
+		<a class="c-pagination__link--next" href="{{ page.next.url }}">
+			<h6>Next &rsaquo;</h6>
+			<h6><strong>{{ page.next.title }}</strong></h6>
+		</a>
+	{% endif %}
+	</nav>
+</section>

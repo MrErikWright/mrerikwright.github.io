@@ -1,0 +1,28 @@
+=responsive-bg-image($image-width, $image-height)
+	background-repeat: no-repeat
+	background-size: 100%
+	padding-bottom: percentage($image-height / $image-width)
+
+=retina
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+		@content
+
+=touch
+	@media screen and (min-width: $touch)
+		@content
+
+=tablet
+	@media screen and (min-width: $tablet)
+		@content
+
+=desktop
+	@media screen and (min-width: $desktop)
+		@content
+
+=widescreen
+	@media screen and (min-width: $widescreen)
+		@content
+
+=fullhd
+	@media screen and (min-width: $fullhd)
+		@content

@@ -1,21 +1,8 @@
-<header class="header">
-  <a class="logo" href="{{ site.url }}/">
-    <svg width="28px" height="20px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <polygon id="logo" points="21.242 19.646 27.512 0 24.168 0 19.76 16.074 19.684 16.074 15.58 0 12.046 0 8.094 16.074 8.018 16.074 3.572 0 0 0 6.308 19.646 9.804 19.646 13.756 4.028 13.832 4.028 17.822 19.646"></polygon>
-    </svg>
-  </a>
-
-  <nav class="main-nav">
-    <ul>
-      <li class="nav-work{% if page.current == 'work' %} active{% endif %}" role="presentation">
-        <a href="{{ site.url }}/">Work</a>
-      </li>
-      <li class="nav-about{% if page.current == 'about' %} active{% endif %}" role="presentation">
-        <a href="{{ site.url }}/about/">About</a>
-      </li>
-      <li class="nav-notes{% if page.current == 'notes' %} active{% endif %}" role="presentation">
-        <a href="{{ site.url }}/notes/">Notes</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<nav class="c-navigation u-flex u-flex-align-items-center u-flex-justify-space-between" role="navigation">
+	<a class="c-navigation__logo" href="{{ site.url }}">erikwright</a>
+	<div class="u-flex u-flex-nowrap">
+	{% for nav in site.navigation %}
+		<a class="c-navigation__link{% if page.title == nav.title or page.current == nav.title %} c-navigation__link--active{% endif %}" href="{{ nav.url | prepend: site.url }}" role="presentation">{{ nav.title }}</a>
+	{% endfor %}
+	</div>
+</nav>

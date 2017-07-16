@@ -1,0 +1,23 @@
+.c-navigation
+	background-color: $base-neutral-color
+	border-bottom: $base-border
+	flex-grow: 0
+	-webkit-overflow-scrolling: touch
+	overflow-x: auto
+	padding: 1rem
+	a
+		color: $base-font-color
+		&:hover
+			opacity: .75
+			text-decoration: none
+	.c-navigation__link--active
+		opacity: .75
+
+.c-navigation__logo
+	font-weight: $font-weight-bold
+
+.c-navigation__link
+	margin-left: $base-spacing / 1.5
+	position: relative
+	+touch
+		margin-left: $base-spacing

@@ -1,0 +1,25 @@
+---
+layout: default
+title: Project Archive
+---
+<section class="c-projects">
+  <ul class="c-project__list">
+  {% for project in site.data.project-archive %}
+    <li class="c-project__item c-project__item--image">
+      <a href="{{ project.url | prepend: site.url }}">
+        <div class="{% if project.nickname != '' %}{{ project.nickname }}{% else %}unassigned{% endif %}"></div>
+      </a>
+      <h2>{{ project.name }}</h2>
+      <h5>{{ project.role }}</h5>
+      <p><a href="{{ project.url | prepend: site.url }}">View project &rsaquo;</a></p>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="c-create">
+  <div class="c-container c-container--narrow">
+    <h3><strong>Looking for more recent projects?</strong></h3>
+    <p>Bummer! You've reached the end of this list. But don't worry! You can always check out my <a href="{{ site.url }}/projects/">most recent projects</a>.</p>
+  </div>
+</section>

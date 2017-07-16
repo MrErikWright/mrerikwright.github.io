@@ -1,0 +1,25 @@
+---
+layout: default
+title: Projects
+---
+<section class="c-projects">
+  <ul class="c-project__list">
+  {% for project in site.data.projects %}
+    <li class="c-project__item c-project__item--image">
+      <a href="{{ project.url | prepend: site.url }}">
+        <div class="{% if project.nickname != '' %}{{ project.nickname }}{% else %}unassigned{% endif %}"></div>
+      </a>
+      <h2>{{ project.name }}</h2>
+      <h5>{{ project.role }}</h5>
+      <p><a href="{{ project.url | prepend: site.url }}">View project &rsaquo;</a></p>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="c-create">
+  <div class="c-container c-container--narrow">
+    <h3><strong>Looking for older projects?</strong></h3>
+    <p>I get it. You're curious, and I like that. Here are some extra projects that didn't quite make the cut. <a href="{{ site.url }}/project-archive/">Go ahead and take a look</a>.</p>
+  </div>
+</section>
