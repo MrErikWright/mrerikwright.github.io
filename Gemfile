@@ -2,7 +2,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # Jekyll Core
-gem "jekyll", "3.5.0"
+gem "jekyll", "3.7.3"
 
 # Plugins
 group :jekyll_plugins do
